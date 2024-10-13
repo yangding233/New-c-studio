@@ -115,43 +115,51 @@
 
 ///////////////////static////////////////////
 //static可修饰局部变量 全局变量 函数  变为静态**
+//
+//
+//#include <stdio.h>
+//#include <string.h>
+//#include "test01.h" //.h文件中就是使用了extern，只不过省略了
+////extern int gal;//既可以用头文件，也可以这么用
+////extern hello();
+//
+//static int c = 10;//static 修饰全局变量时外部连接属性变为内部链接属性，不能被extern
+//static int c = 10;//static 修饰全局函数时外部连接属性变为内部链接属性，不能被extern，
+//static test00(){}
+//void test()
+//{
+//	static int a = 0;
+//	//static修饰局部变量的时候，局部变量出了作用域，不销毁
+//	// 本质上，static修饰局部变量时，改变了变量的储存位置
+//	// 将栈区的局部变量变为静态区的静态变量 直到程序结束才销毁
+//	a++;
+//	printf("%d ", a);
+//}
+//
+//
+//int main()
+//{
+//
+//
+//
+//	for (int i = 0; i < 10; i++)
+//	{
+//		test();
+//	}
+//
+//
+//	printf("%d ", gal);
+//
+//	hello();
+//
+//
+//	return 0;
+//}
 
-
-#include <stdio.h>
-#include <string.h>
-#include "test01.h" //.h文件中就是使用了extern，只不过省略了
-//extern int gal;//既可以用头文件，也可以这么用
-//extern hello();
-
-static int c = 10;//static 修饰全局变量时外部连接属性变为内部链接属性，不能被extern
-static int c = 10;//static 修饰全局函数时外部连接属性变为内部链接属性，不能被extern，
-static test00(){}
-void test()
-{
-	static int a = 0;
-	//static修饰局部变量的时候，局部变量出了作用域，不销毁
-	// 本质上，static修饰局部变量时，改变了变量的储存位置
-	// 将栈区的局部变量变为静态区的静态变量 直到程序结束才销毁
-	a++;
-	printf("%d ", a);
-}
-
-
+ #include <stdio.h>
 int main()
 {
-
-
-
-	for (int i = 0; i < 10; i++)
-	{
-		test();
-	}
-
-
-	printf("%d ", gal);
-
-	hello();
-
-
-	return 0;
+    sizeof(short);
+        ;//%c--打印字符格式的数据//%f--打印浮点数字—答应小数
+    return 0;
 }
