@@ -30,6 +30,7 @@ bool find(int *a,int len,int into)
         }
 
     }
+    printf("we can't find the element\n");
     return 0;
 }
 
